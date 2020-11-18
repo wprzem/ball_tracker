@@ -4,19 +4,26 @@
 using namespace cv;
 using namespace std;
 
-int main(int argc, char** argv)
+int processImage(const String& img)
 {
-    // Read the image file
-    Mat src = imread(
-         "../images/volleyball2.jpg");
-
-    // Check for failure
-    if (src.empty()) 
+    String imgName;
+    try
     {
-        cout << "Could not open or find the image" << endl;
-        cin.get(); //wait for any key press
+        imgName = samples::findFile(img, true, true);
+    }
+    catch (const Exception& ex)
+    {
+        std::cout << "Image file not found\n";
         return -1;
     }
+
+    Mat src = imread(imgName);
+    if (src.empty())
+    {
+        std::cerr << "Image file invalid\n";
+        return -1;
+    }
+
     Mat gray;
     cvtColor(src, gray, COLOR_BGR2GRAY);
     medianBlur(gray, gray, 5);
@@ -36,8 +43,37 @@ int main(int argc, char** argv)
         int radius = c[2];
         circle( src, center, radius, Scalar(255,0,255), 3, LINE_AA);
     }
-    imshow("detected circles", src);
+
+    imshow("img", src);
     waitKey();
+    return 0;
+}
+
+int processVideo(const String& video)
+{
+    return 0;
+}
+
+int main(int argc, char** argv)
+{
+    CommandLineParser parser(argc, argv, 
+        "{h help||don't cry}"
+        "{v video||source video file}"
+        "{i img||source img file}");
+
+    if (parser.has("help"))
+    {
+        parser.printMessage();
+        return 0;
+    }
+    if (parser.has("img"))
+    {
+        return processImage(parser.get<String>("img"));
+    }
+    if (parser.has("video"))
+    {
+        return processVideo(parser.get<String>("video"));
+    }
 
     return 0;
 }
