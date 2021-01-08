@@ -12,11 +12,11 @@ while(cap.isOpened()):
         image=grey,
         method=cv2.HOUGH_GRADIENT,
         dp=1.5,
-        minDist=800,
-        param1=300,
-        param2=0.9,
-        minRadius=200,
-        maxRadius=250)
+        minDist=2000,
+        param1=50,
+        param2=30,
+        minRadius=250,
+        maxRadius=280)
 
     if circles is not None:
         circles = np.uint16(np.around(circles))
