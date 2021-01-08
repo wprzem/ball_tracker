@@ -7,7 +7,8 @@ cv2.namedWindow('frame', cv2.WINDOW_NORMAL)
 while(cap.isOpened()):
     ret, frame = cap.read()
     grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    grey = cv2.GaussianBlur(grey, (5, 5), 0)
+    grey = cv2.GaussianBlur(grey, (11, 11), 0)
+    # grey = cv2.medianBlur(grey, 25)
     circles = cv2.HoughCircles(
         image=grey,
         method=cv2.HOUGH_GRADIENT,
