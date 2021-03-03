@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train_images</folder>
+	<filename>forza_size_5_competition_standard_volleyball_for_all_volleyball_tournaments_and_matches.jpg</filename>
+	<path>D:\MyProjects\git\ball_tracker\train_images\forza_size_5_competition_standard_volleyball_for_all_volleyball_tournaments_and_matches.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2560</width>
+		<height>2560</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>ball</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>318</xmin>
+			<ymin>414</ymin>
+			<xmax>2250</xmax>
+			<ymax>2309</ymax>
+		</bndbox>
+	</object>
+</annotation>

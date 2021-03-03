@@ -1,0 +1,14 @@
+<annotation>
+	<folder>train_images</folder>
+	<filename>images75.jpg</filename>
+	<path>D:\MyProjects\git\ball_tracker\train_images\images75.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>168</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train_images</folder>
+	<filename>images230.jpg</filename>
+	<path>D:\MyProjects\git\ball_tracker\train_images\images230.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>290</width>
+		<height>174</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>ball</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>192</xmin>
+			<ymin>25</ymin>
+			<xmax>202</xmax>
+			<ymax>35</ymax>
+		</bndbox>
+	</object>
+</annotation>

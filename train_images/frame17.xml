@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train_images</folder>
+	<filename>frame17.jpg</filename>
+	<path>D:\MyProjects\git\ball_tracker\train_images\frame17.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3840</width>
+		<height>2160</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>ball</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1945</xmin>
+			<ymin>41</ymin>
+			<xmax>2011</xmax>
+			<ymax>109</ymax>
+		</bndbox>
+	</object>
+</annotation>

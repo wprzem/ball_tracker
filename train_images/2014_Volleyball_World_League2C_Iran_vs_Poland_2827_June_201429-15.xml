@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train_images</folder>
+	<filename>2014_Volleyball_World_League2C_Iran_vs_Poland_2827_June_201429-15.jpg</filename>
+	<path>D:\MyProjects\git\ball_tracker\train_images\2014_Volleyball_World_League2C_Iran_vs_Poland_2827_June_201429-15.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>557</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>ball</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>223</xmin>
+			<ymin>145</ymin>
+			<xmax>571</xmax>
+			<ymax>494</ymax>
+		</bndbox>
+	</object>
+</annotation>

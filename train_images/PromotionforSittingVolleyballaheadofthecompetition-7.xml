@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train_images</folder>
+	<filename>PromotionforSittingVolleyballaheadofthecompetition-7.jpg</filename>
+	<path>D:\MyProjects\git\ball_tracker\train_images\PromotionforSittingVolleyballaheadofthecompetition-7.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3000</width>
+		<height>2000</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>ball</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>457</xmin>
+			<ymin>229</ymin>
+			<xmax>776</xmax>
+			<ymax>552</ymax>
+		</bndbox>
+	</object>
+</annotation>
