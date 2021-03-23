@@ -2,6 +2,9 @@ import cv2
 import numpy as np
 
 net = cv2.dnn.readNet("yolov3_training_last.weights", "yolov3.cfg")
+net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
+net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
+
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
@@ -9,8 +12,8 @@ classes = []
 with open("coco.names", "r") as f:
     classes = [line.strip() for line in f.readlines()]
 
-# cap = cv2.VideoCapture('../images/movie.avi')
-cap = cv2.VideoCapture('../images/2020_1114_132258_076.mov')
+cap = cv2.VideoCapture('../images/VID_game.mp4')
+# cap = cv2.VideoCapture('../images/2020_1114_132258_076.mov')
 
 while(cap.isOpened()):
     ret, img = cap.read()
@@ -51,7 +54,7 @@ while(cap.isOpened()):
         for i in range(len(boxes)):
             if i in indexes:
                 x, y, w, h = boxes[i]
-                label = str(classes[class_ids[i]])
+                label = f"{classes[class_ids[i]]}: {100 * confidences[i]:.2f}"
                 color = (0, 255, 0)
                 cv2.rectangle(img, (x, y), (x + w, y + h), color, 2)
                 cv2.putText(img, label, (x, y + 30), font, 1, color, 1)
